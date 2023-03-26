@@ -131,7 +131,7 @@
  
  .icon-large {
      font-size: var(--medium-font);
-     padding: 0 .50em 0 0;
+     padding: 0 .75em 0 0;
  }
  
  .mobile-hide {
@@ -253,7 +253,7 @@
      position: relative;
      font-weight: 600;
      display: flex;
-     padding-left: .50em;
+     padding-left: .75em;
      margin-right: 2em;
      color: var(--title-color);
  }
@@ -306,6 +306,9 @@
      margin-bottom: 1.5em;
      z-index: 1;
  }
+ /* HEADER MAIN / DEPARTMENT CATEGORY */
+ 
+ header-main {}
  
  @media (min-width: 992px) {
      .container {
