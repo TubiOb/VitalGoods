@@ -31,6 +31,7 @@
     --p-font: 0.941rem;
     --header-height: 3.5rem;
     --smaller-font-size: .75rem;
+    --font-small: 13px;
     --card-color: #eaf4f4;
     --hue: 207;
     --sat: 90%;
@@ -63,7 +64,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--text-color-light);
+    color: var(--text-color);
     /* color: #000; */
 }
 
@@ -122,11 +123,11 @@ input::placeholder {
 }
 
 .main-links a:hover {
-    color: var(--title-color);
+    color: var(--text-color-light);
 }
 
 .second-links a:hover {
-    color: var(--text-color);
+    color: var(--text-color-light);
 }
 
 .icon-small,
@@ -255,7 +256,7 @@ header) li>a {
 }
 
 :where(.navigation-top) ul ul li a {
-    padding: .25em 1em;
+    padding: .25em 2em;
 }
 
 :where(.navigation-top) ul ul li.current a {
@@ -330,7 +331,7 @@ nav .fly-item {
     top: 0;
     right: 16px;
     width: 16px;
-    background-color: var(--title-color);
+    background-color: var(--primary-clr);
     border-radius: 50%;
 }
 
@@ -537,7 +538,7 @@ form.search button:hover {
     }
     .dpt-menu>ul>li>a {
         font-weight: 500;
-        font-size: var(--smaller-font-size);
+        font-size: var(--font-small);
         padding: 0 1.5em;
         border-bottom: 1px solid var(--border-color);
     }
@@ -549,7 +550,7 @@ form.search button:hover {
         height: auto;
         min-height: 100%;
         padding: 1.5em;
-        font-size: var(--p-font);
+        font-size: var(--font-small);
         line-height: 2.5em;
         border: 1px solid var(--border-color);
         border-top: 0;
@@ -582,12 +583,5 @@ form.search button:hover {
         right: 0;
         bottom: 0;
         background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(225, 225, 242, 0) 80%);
-    }
-    .dpt-menu {
-        width: auto;
-        min-width: 100%;
-    }
-    .dpt-menu .has-child:hover {
-        display: flex;
     }
 }
