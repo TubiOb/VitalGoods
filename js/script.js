@@ -42,6 +42,20 @@ function toggle(e) {
 };
 
 
+// SHOW SEARCH
+const searchButton = document.querySelector('.t-search'),
+    tClose = document.querySelector('.search-close'),
+    showClass = document.querySelector('.site');
+
+searchButton.addEventListener('click', function() {
+    showClass.classList.toggle('showsearch');
+});
+
+tClose.addEventListener('click', function() {
+    showClass.classList.remove('showsearch');
+});
+
+
 // TOGGLE DEPARTMENT MENU
 const dptButton = document.querySelector('.dpt-cat .dpt-trigger'),
     dptClass = document.querySelector('.site');
