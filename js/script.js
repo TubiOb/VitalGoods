@@ -31,7 +31,7 @@ closeButton.addEventListener('click', function() {
 });
 
 //SHOW SUB MENU ON MOBILE
-const submenu = document.querySelectorAll('.has-child .icon-small');
+const submenu = document.querySelectorAll('.has-child');
 submenu.forEach((menu) => menu.addEventListener('click', toggle));
 
 function toggle(e) {

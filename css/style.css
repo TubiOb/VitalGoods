@@ -46,7 +46,6 @@
     --border-color: #e5e8ec;
     --light-text-color: #7c899a;
     --support-color: rgb(151, 100, 3);
-    --light-text-color: #7c899a;
     --light-light-text-color: #dce1de;
 }
 
@@ -268,14 +267,13 @@ header) li>a {
 }
 
 :where(.navigation-top,
-.thetop-nav) .right ul ul li a {
+.thetop-nav) ul ul li a {
     padding: .25em 2em;
 }
 
 :where(.navigation-top,
-.thetop-nav) .right ul ul li.current a {
-    background-color: var(--text-color-light);
-    color: var(--bg-color);
+.thetop-nav) ul ul li.current a {
+    background-color: var(--border-color);
 }
 
 .navigation-top li:hover ul {
@@ -501,10 +499,6 @@ form.search button:hover {
     position: relative;
 }
 
-.off-canvas .canvas-head .logo .circle {
-    opacity: .75;
-}
-
 .t-close {
     font-size: 1.25em;
     width: 32px;
@@ -526,7 +520,7 @@ form.search button:hover {
     padding: 1em;
     margin-bottom: 1em;
     text-align: center;
-    background-color: var(--light-bg-color);
+    background-color: var(--light-light-text-color);
     border-radius: 7px 7px 0 0;
 }
 
@@ -594,6 +588,24 @@ form.search button:hover {
     border: 1px solid var(--border-color);
     line-height: 16px;
     margin: 0 .5em .5em 0;
+}
+
+
+/* RESPONSIVE MENU - OFF CANVAS SCROLLBAR */
+
+.site-off::-webkit-scrollbar {
+    width: .4rem;
+    border-radius: .5rem;
+    background-color: #fff;
+}
+
+.site-off::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: var(--light-light-text-color);
+}
+
+.site-off::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color-light);
 }
 
 
@@ -748,5 +760,11 @@ form.search button:hover {
         right: 0;
         bottom: 0;
         background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(225, 225, 242, 0) 80%);
+    }
+    #page .dpt-menu {
+        display: none;
+    }
+    #page.showdpt .dpt-menu {
+        display: block;
     }
 }
