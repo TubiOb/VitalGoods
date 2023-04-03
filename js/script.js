@@ -30,6 +30,21 @@ closeButton.addEventListener('click', function() {
     addclass.classList.remove('showmenu');
 });
 
+var navPlace = document.querySelector('.off-canvas nav');
+document.addEventListener('click', function(event) {
+    // If the clicked element is not a child of the mobile navbar or its toggle button
+    if (!navPlace.contains(event.target) && !closeButton.contains(event.target)) {
+        navPlace.classList.remove('showmenu');
+    }
+});
+
+// document.addEventListener('click', (event) => {
+//     if (!site.contains(event.target)) {
+//         site.classList.remove('show-category');
+//         folderCategories.style.display = 'none';
+//     }
+// });
+
 //SHOW SUB MENU ON MOBILE
 const submenu = document.querySelectorAll('.has-child');
 submenu.forEach((menu) => menu.addEventListener('click', toggle));
@@ -43,17 +58,17 @@ function toggle(e) {
 
 
 // SHOW SEARCH
-const searchButton = document.querySelector('.t-search'),
-    tClose = document.querySelector('.search-close'),
-    showClass = document.querySelector('.site');
+// const searchButton = document.querySelector('.t-search'),
+//     tClose = document.querySelector('.search-close'),
+//     showClass = document.querySelector('.site');
 
-searchButton.addEventListener('click', function() {
-    showClass.classList.toggle('showsearch');
-});
+// searchButton.addEventListener('click', function() {
+//     showClass.classList.toggle('showsearch');
+// });
 
-tClose.addEventListener('click', function() {
-    showClass.classList.remove('showsearch');
-});
+// tClose.addEventListener('click', function() {
+//     showClass.classList.remove('showsearch');
+// });
 
 
 // TOGGLE DEPARTMENT MENU
@@ -62,4 +77,32 @@ const dptButton = document.querySelector('.dpt-cat .dpt-trigger'),
 
 dptButton.addEventListener('click', function() {
     dptClass.classList.toggle('showdpt');
+});
+
+
+
+// SWIPER METHOD
+const swiper = new Swiper('.swiper', {
+    speed: 2000,
+
+    loop: true,
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+
+    mousewheel: {
+        invert: false,
+    },
+
 });
