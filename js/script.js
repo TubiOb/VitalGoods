@@ -103,6 +103,21 @@ var swiper = new Swiper('.swiper', {
 });
 
 
+// SHUFFLING THE TABS ON FEATURED PRODUCTS
+const tabs = document.querySelectorAll('.tab_btn'),
+    all_content = document.querySelectorAll('.content');
+
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+        tab.classList.add('active');
+    });
+});
+
+
 var swiper1 = new Swiper('.content', {
     slidesPerView: 4,
 
