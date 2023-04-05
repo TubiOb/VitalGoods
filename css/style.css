@@ -676,7 +676,7 @@ h3) span:last-child {
     flex-direction: column;
 }
 
-.content {
+.content_box {
     width: 100%;
     height: auto;
     padding: 19px;
@@ -723,14 +723,16 @@ h3) span:last-child {
 
 .line {
     position: absolute;
-    top: 50px;
-    left: 14px;
+    top: 55px;
+    left: 17px;
     width: 80px;
     height: 3px;
     background-color: var(--primary-clr);
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
 }
 
-.content .item {
+.content_box .item {
     /* border: 1px solid blue; */
     /* display: none; */
     cursor: pointer;
@@ -751,12 +753,32 @@ h3) span:last-child {
     position: relative;
 }
 
-.content .item:hover {
+.content_box .content {
+    display: none;
+    animation: moving .5s ease;
+}
+
+.content_box .content.active {
+    display: block;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(50px);
+        opacity: 1;
+    }
+}
+
+.content_box .item:hover {
     box-shadow: 0 0 18px 0 rgba(35, 35, 35, .3);
     scale: 1.01;
 }
 
-.content .item img {
+.content_box .item img {
     width: 100%;
     /* margin: auto; */
     height: 200px;
@@ -764,8 +786,8 @@ h3) span:last-child {
     object-fit: cover;
 }
 
-.content .item h4,
-.content .item span {
+.content_box .item h4,
+.content_box .item span {
     font-size: var(--font-small);
     color: var(--title-color);
     text-transform: uppercase;
