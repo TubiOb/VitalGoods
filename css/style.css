@@ -689,7 +689,6 @@ h3) span:last-child {
     display: block;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #29fd53;
 }
 
 .features-nav h4 {
@@ -703,8 +702,7 @@ h3) span:last-child {
     justify-content: space-around;
     align-items: center;
     position: relative;
-    border-bottom: 2px solid var(--light-light-text-color);
-    border: 1px solid red;
+    /* border-bottom: 2px solid var(--light-light-text-color); */
 }
 
 .tab-box .tab_btn {
@@ -733,8 +731,6 @@ h3) span:last-child {
 }
 
 .content_box .item {
-    /* border: 1px solid blue; */
-    /* display: none; */
     cursor: pointer;
     flex-direction: column;
     background-color: var(--bg-color);
@@ -745,8 +741,6 @@ h3) span:last-child {
     color: white;
     border-radius: 10px;
     transition: all 0.4s ease-in-out;
-    box-shadow: 0px 7px 10px rgba(black, 0.9);
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4), 0 4px 8px rgba(255, 255, 255, 0.4);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     align-items: center;
     justify-content: center;
