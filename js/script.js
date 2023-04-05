@@ -82,7 +82,7 @@ dptButton.addEventListener('click', function() {
 
 
 // SWIPER METHOD
-const swiper = new Swiper('.swiper', {
+var swiper = new Swiper('.swiper', {
     speed: 2000,
 
     loop: true,
@@ -99,5 +99,62 @@ const swiper = new Swiper('.swiper', {
     keyboard: {
         enabled: true,
         onlyInViewport: false,
+    },
+});
+
+
+var swiper1 = new Swiper('.content', {
+    slidesPerView: 4,
+
+    spaceBetween: 30,
+
+    freeMode: true,
+
+    // loop: true,
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+    breakpoints: {
+        // when window width is >= 200px (for mobile screens)
+        200: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        // when window width is >= 340px (for mobile screens)
+        300: {
+            slidesPerView: 1.05,
+            spaceBetween: 20
+        },
+        // when window width is >= 200px (for mobile screens)
+        350: {
+            slidesPerView: 1.25,
+            spaceBetween: 20
+        },
+        // when window width is >= 200px (for mobile screens)
+        450: {
+            slidesPerView: 1.5,
+            spaceBetween: 20
+        },
+        // when window width is >= 576px (for mobile screens)
+        570: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        // when window width is >= 200px (for mobile screens)
+        700: {
+            slidesPerView: 3.5,
+            spaceBetween: 20
+        },
+        // when window width is >= 992px (for large screens)
+        992: {
+            slidesPerView: 3.75,
+            spaceBetween: 30
+        },
+        1023: {
+            slidesPerView: 4,
+            spaceBetween: 30
+        }
     },
 });
