@@ -114,6 +114,7 @@ tabs.forEach((tab, index) => {
             tab.classList.remove('active');
         });
         tab.classList.add('active');
+
         var line = document.querySelector('.line');
         line.style.width = e.target.offsetWidth + "px";
         line.style.left = e.target.offsetLeft + "px";
@@ -126,7 +127,7 @@ tabs.forEach((tab, index) => {
 });
 
 
-var swiper1 = new Swiper('.content_box', {
+var swiper1 = new Swiper('.mySwiper', {
     slidesPerView: 4,
 
     spaceBetween: 30,

@@ -684,11 +684,12 @@ h3) span:last-child {
 }
 
 .features-nav {
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
-    display: block;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    /* padding: 20px; */
 }
 
 .features-nav h4 {
@@ -696,13 +697,14 @@ h3) span:last-child {
 }
 
 .tab-box {
-    width: 90%;
+    /* width: 90%; */
+    padding: 0 30px;
     display: flex;
-    /* margin: auto; */
     justify-content: space-around;
     align-items: center;
+    border: 1px solid red;
+    border-bottom: 2px solid var(--light-light-text-color);
     position: relative;
-    /* border-bottom: 2px solid var(--light-light-text-color); */
 }
 
 .tab-box .tab_btn {
@@ -722,7 +724,7 @@ h3) span:last-child {
 .line {
     position: absolute;
     top: 55px;
-    left: 17px;
+    left: 28px;
     width: 80px;
     height: 3px;
     background-color: var(--primary-clr);
@@ -745,6 +747,7 @@ h3) span:last-child {
     align-items: center;
     justify-content: center;
     position: relative;
+    border: 1px solid red;
 }
 
 .content_box .content {
@@ -1065,6 +1068,10 @@ h3) span:last-child {
     }
     .tab-box {
         width: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
         /* margin-left: auto; */
     }
 }
