@@ -115,9 +115,9 @@ tabs.forEach((tab, index) => {
         });
         tab.classList.add('active');
 
-        var line = document.querySelector('.line');
-        line.style.width = e.target.offsetWidth + "px";
-        line.style.left = e.target.offsetLeft + "px";
+        // var line = document.querySelector('.line');
+        // line.style.width = e.target.offsetWidth + "px";
+        // line.style.left = e.target.offsetLeft + "px";
 
         all_content.forEach(content => {
             content.classList.remove('active');
