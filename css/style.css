@@ -733,7 +733,7 @@ h3) span:last-child {
     padding: 5px;
     margin: 10px 0;
     width: 100px;
-    height: 350px;
+    height: 250px;
     color: white;
     border-radius: 10px;
     transition: all 0.4s ease-in-out;
@@ -742,7 +742,7 @@ h3) span:last-child {
     justify-content: center;
     position: relative;
     border: 1px solid red;
-    display: none;
+    /* display: none; */
 }
 
 .content_box .content {
@@ -765,12 +765,12 @@ h3) span:last-child {
     }
 }
 
-.content_box .item:hover {
+.content .item:hover {
     box-shadow: 0 0 18px 0 rgba(35, 35, 35, .3);
     scale: 1.01;
 }
 
-.content_box .item img {
+.content .item img {
     width: 100%;
     /* margin: auto; */
     height: 200px;
@@ -778,14 +778,88 @@ h3) span:last-child {
     object-fit: cover;
 }
 
-.content_box .item h4,
-.content_box .item span {
+.content .item span {
     font-size: var(--font-small);
     color: var(--title-color);
     text-transform: uppercase;
     font-weight: 600;
     margin: 10px 0;
     margin: .2rem auto;
+}
+
+
+/* .content .item .text-content {
+    height: 90px;
+    margin: 0 auto;
+    transition: height 0.3s ease-in-out;
+    margin-bottom: 1rem;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: .2rem;
+    padding: .7rem;
+}
+
+.content .item:hover .text-content {
+    display: flex;
+    border-radius: 10px;
+}
+
+.text-content p {
+    font-size: var(--p-font);
+    line-height: 1.6;
+    opacity: .9;
+    margin: .4rem;
+} */
+
+.content .item .hoverable {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.content .item .hoverable li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: .25em;
+    margin: .25em;
+    border-radius: 50%;
+    line-height: 1;
+    background-color: var(--bg-color);
+    opacity: .5;
+    transition: background-color .3s, color .3s, opacity .3s;
+}
+
+.content .item:hover .hoverable li a {
+    opacity: 1;
+}
+
+.content .item .hoverable li a:hover {
+    color: var(--bg-color);
+    background-color: #0a021c;
+}
+
+.content .item .hoverable li.active a:hover {
+    background-color: var(--primary-clr);
+}
+
+.content .item .hoverable li:not(.active) {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform .3s, opacity .2s;
+}
+
+.content .item:hover .hoverable li {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.content .item .hoverable li:last-child {
+    transition-delay: .1s;
 }
 
 

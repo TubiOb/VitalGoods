@@ -127,6 +127,14 @@ tabs.forEach((tab, index) => {
 });
 
 
+
+
+// ADDING THE IMAGES, NAMES AND PRICES OF THE TABBED NAVIGATION ITEMS
+
+
+
+
+
 var swiper1 = new Swiper('.mySwiper', {
     slidesPerView: 4,
 
