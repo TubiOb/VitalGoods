@@ -130,6 +130,267 @@ tabs.forEach((tab, index) => {
 
 
 // ADDING THE IMAGES, NAMES AND PRICES OF THE TABBED NAVIGATION ITEMS
+const products = [{
+        tab: 'featured',
+        items: [{
+                title: 'Weighted Jump Rope',
+                image: './assets/featured/pexels-dom-j-45056.jpg'
+            },
+            {
+                title: 'Seated Row',
+                image: './assets/featured/pexels-ivan-samkov-4162542.jpg'
+            },
+            {
+                title: 'Small Weight Sled',
+                image: './assets/featured/SmallSledHR.png'
+            },
+            {
+                title: 'Body-Solid Battle Training Rope',
+                image: './assets/featured/pexels-ivan-samkov-4164762.jpg'
+            }, {
+                title: 'Concept2 RowErg',
+                image: './assets/featured/pexels-rodnae-productions-8611382.jpg'
+            },
+            {
+                title: 'Cascade Raptor Functional Trainer',
+                image: './assets/featured/raptor-1.jpeg'
+            }, {
+                title: 'Cascade Climber Cross Crawl',
+                image: './assets/featured/chf-climber-angled-front.jpg'
+            },
+            {
+                title: '4 Slot Urethane Olympic Plates',
+                image: './assets/featured/pexels-anete-lusina-4793229.jpg'
+            },
+            {
+                title: 'Body-Solid Tool Resistance Tube',
+                image: './assets/featured/pexels-ivan-samkov-4162447.jpg'
+            },
+            {
+                title: 'Boxing Punching Bags',
+                image: './assets/featured/pexels-ivan-samkov-4164521.jpg'
+            },
+            {
+                title: 'Back Extension Bench',
+                image: './assets/featured/pexels-ivan-samkov-4162538.jpg'
+            },
+            {
+                title: 'Multi-Workout Ab Bench',
+                image: './assets/featured/pexels-ivan-samkov-4162547.jpg'
+            },
+        ]
+    },
+    {
+        tab: 'equipment',
+        items: [
+            // {
+            // title: 'Body-Solid FUSION 600',
+            // image: './assets/euipments/F600.jpg'
+            // },
+            {
+                title: 'Body-Solid Pro Club Line Dual Cable Column',
+                image: './assets/equipments/SDC200Gsm.jpg'
+            },
+            {
+                title: 'Body-Solid PowerLIFT Freeweight Leverage Gym Package',
+                image: './assets/equipments/SBL460P4_main.jpg'
+            },
+            {
+                title: 'Body-Solid G10B Bi-Angular Gym',
+                image: './assets/equipments/G10B_main.jpg'
+            },
+            {
+                title: 'Body-Solid G2B Bi-Angular Home Gym',
+                image: './assets/equipments/G2B_noModel.jpg'
+            },
+            {
+                title: 'Apollo Pro V Rower',
+                image: './assets/equipments/apolloprov.jpg'
+            },
+            {
+                title: 'Body Trac Glider',
+                image: './assets/equipments/351050.jpg'
+            },
+            {
+                title: 'Avari by Stamina Easy Glide Rower',
+                image: './assets/equipments/350600.jpg'
+            },
+            {
+                title: 'BodyCraft SPX-MAG Indoor Training Cycle',
+                image: './assets/equipments/spx-mag.jpg'
+            },
+            {
+                title: 'BodyCraft SPT-MAG Indoor Club Group Cycle',
+                image: './assets/equipments/spmag.jpg'
+            },
+            {
+                title: 'Cascade Ultra Runner Plus Curve Treadmill',
+                image: './assets/equipments/chf-ultrarunner-side.jpg'
+            },
+            {
+                title: 'Body-Solid Endurance Walking Treadmill',
+                image: './assets/equipments/ET50.png'
+            },
+            {
+                title: 'Cardio Package - Treadmill and Exercise Bike (T70 plus Velocity)',
+                image: './assets/equipments/t70-velocity.jpg'
+            },
+            {
+                title: 'Fitnex R55SG Recumbent Bike',
+                image: './assets/equipments/r55sg.1.jpg'
+            },
+            {
+                title: 'Stamina Elite Total Body Recumbent Bike',
+                image: './assets/equipments/159100.jpg'
+            },
+            {
+                title: 'Body-Solid Endurance B5U Upright Exercise Bike',
+                image: './assets/equipments/B5U.png'
+            },
+            {
+                title: 'Body-Solid Hexagon Pro Training Rig Advanced Package',
+                image: './assets/equipments/SRHEXPROADVANCED.png'
+            },
+
+        ]
+    },
+    {
+        tab: 'gears',
+        items: [{
+                title: 'Sports Kid Men Women Long Sleeve Soccer Training Set',
+                image: './assets/wears/Sports Kid Men Women Long Sleeve Soccer Training Set.jpg'
+            },
+            {
+                title: 'Men Sports Basketball Soccer Train Sweatsuit Man T Shirt Set',
+                image: './assets/wears/Men Sports Basketball Soccer Train Sweatsuit Man T Shirt Set.jpg'
+            },
+            {
+                title: 'LADIES SPORT FITNESS SET WEARS',
+                image: './assets/wears/LADIES SPORT FITNESS SET WEARS.jpg'
+            },
+            {
+                title: 'Everlast Womens Criss Cross Sport Bra - Lavender',
+                image: './assets/wears/Everlast cris-cros bra.jpg'
+            },
+            // {
+            //     title: 'Womens Sweatpants High - waisted Seamless Yoga Leggings - Dark Gray',
+            //     image: './assets/wears/Womens Sweatpants High-waisted Seamless Yoga Leggings-Dark Gray.jpg '
+            // },
+            {
+                title: 'Sport Casual Short Sleeve T-shirt And Shorts Set-Grey',
+                image: './assets/wears/Sport Casual Short Sleeve T-shirt And Shorts Set-Grey.jpg'
+            },
+            {
+                title: 'HIGH WAIST TRAINER LEGGINGS',
+                image: './assets/wears/Highwaist Leggings.jpg'
+            },
+            {
+                title: 'Three Piece Yoga Sportswear Casual Long Sleeve Bra Tights Set-Blue',
+                image: './assets/wears/Three Piece Yoga Sportswear Casual Long Sleeve Bra Tights Set-Blue.jpg'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+            {
+                title: '',
+                image: './assets/wears/'
+            },
+        ]
+    }, {
+        tab: 'powerlifting',
+        items: [{
+                title: '',
+                image: ''
+            },
+            {
+                title: '',
+                image: ''
+            },
+
+        ]
+    }
+];
+
+
+
+function createProductCard(product) {
+    return `
+    <div class="swiper-slide item">
+      <img src="${product.image}" alt="${product.title}">
+      <div class="hoverable">
+        <ul>
+          <li class="active">
+            <a href="#">
+              <i class="ri-heart-line"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="ri-eye-line"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="ri-shuffle-line"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <span>${product.title}</span>
+    </div>
+  `;
+}
+
+
+
+
+function createProductCardsForTab(tab) {
+    const tabContent = document.querySelector(`.content[data-tab="${tab.tab}"]`);
+    const swiperWrapper = tabContent.querySelector('.swiper-wrapper');
+
+    tab.items.forEach(item => {
+        const cardHtml = createProductCard(item);
+        swiperWrapper.innerHTML += cardHtml;
+    });
+}
+
+
+products.forEach(tab => {
+    createProductCardsForTab(tab);
+});
 
 
 
