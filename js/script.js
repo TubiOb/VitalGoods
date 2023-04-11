@@ -58,17 +58,17 @@ function toggle(e) {
 
 
 // SHOW SEARCH
-// const searchButton = document.querySelector('.t-search'),
-//     tClose = document.querySelector('.search-close'),
-//     showClass = document.querySelector('.site');
+const searchButton = document.querySelector('.t-search'),
+    tClose = document.querySelector('.search-close'),
+    showClass = document.querySelector('.site');
 
-// searchButton.addEventListener('click', function() {
-//     showClass.classList.toggle('showsearch');
-// });
+searchButton.addEventListener('click', function() {
+    showClass.classList.toggle('showsearch');
+});
 
-// tClose.addEventListener('click', function() {
-//     showClass.classList.remove('showsearch');
-// });
+tClose.addEventListener('click', function() {
+    showClass.classList.remove('showsearch');
+});
 
 
 // TOGGLE DEPARTMENT MENU
@@ -289,57 +289,108 @@ const products = [{
                 image: './assets/wears/Three Piece Yoga Sportswear Casual Long Sleeve Bra Tights Set-Blue.jpg'
             },
             {
-                title: '',
-                image: './assets/wears/'
+                title: 'American Barbell Aluminum Seat Row/Chinning Cable Attachment',
+                image: './assets/wears/American Barbell Aluminum Seat Row-Chinning Cable Attachment.jpg'
             },
             {
-                title: '',
-                image: './assets/wears/'
+                title: 'Primo Chalk - Loose Chalk 5lb Bucket',
+                image: './assets/wears/Primo Chalk - Loose Chalk 5lb Bucket.jpg'
             },
             {
-                title: '',
-                image: './assets/wears/'
+                title: '2.5" Nylon Wrist Wraps',
+                image: './assets/wears/Body-Solid Nylon Wrist Wraps.jpg'
             },
             {
-                title: '',
-                image: './assets/wears/'
+                title: 'Grizzly Paws Training Gloves',
+                image: './assets/wears/873804grizzlypaws.jpg'
             },
             {
-                title: '',
-                image: './assets/wears/'
+                title: 'Body-Solid Tools Pro-Power Grips',
+                image: './assets/wears/Body-Solid Tools Pro-Power Grips.jpg'
             },
             {
-                title: '',
-                image: './assets/wears/'
-            },
-            {
-                title: '',
-                image: './assets/wears/'
-            },
-            {
-                title: '',
-                image: './assets/wears/'
-            },
-            {
-                title: '',
-                image: './assets/wears/'
-            },
-            {
-                title: '',
-                image: './assets/wears/'
+                title: 'Biker Shorts',
+                image: './assets/wears/Black Biker Short (tight).jpg'
             },
         ]
     }, {
         tab: 'powerlifting',
         items: [{
-                title: '',
-                image: ''
+                title: '12 pair Vertical Dumbbell Rack',
+                image: './assets/powerlifting/GDR24600px.png'
             },
             {
-                title: '',
-                image: ''
+                title: 'American Barbell Elite Power Bar 20KG',
+                image: './assets/powerlifting/OB20SSIPF.png'
             },
-
+            {
+                title: 'American Barbell Dual Height Fat Grip Hex Bar',
+                image: './assets/powerlifting/hexsp1.jpeg'
+            },
+            {
+                title: 'American Barbell Hard Chrome Olympic EZ Curl Bar',
+                image: './assets/powerlifting/OBZSS.jpg'
+            },
+            {
+                title: 'American Barbell Hex Trap Bar',
+                image: './assets/powerlifting/SHRB.jpg'
+            },
+            {
+                title: 'American Barbell 10KG Olympic Training Bar',
+                image: './assets/powerlifting/OB10CHIWF.png'
+            },
+            {
+                title: 'ADJUSTABLE POWER BENCH',
+                image: './assets/powerlifting/Bench_ADJ-3.jpeg'
+            },
+            {
+                title: 'American Barbell GHD-1 - Glute Ham Bench',
+                image: './assets/powerlifting/GHD-1.jpg'
+            },
+            {
+                title: 'Body-Solid Cam Series Leg Ext / Curl Machine',
+                image: './assets/powerlifting/GCEC340.jpg'
+            },
+            {
+                title: 'Body-Solid Deluxe Cable Crossover',
+                image: './assets/powerlifting/GDCC250.jpg'
+            },
+            {
+                title: 'Body-Solid Leg & Calf Press Machine',
+                image: './assets/powerlifting/GLPSTK.jpg'
+            },
+            // {
+            //     title: '200LB WEIGHT STACK UPGRADE KIT FOR BodyCraft F431 Lat Attachment',
+            //     image: './assets/powerlifting/f200-weight-stack.jpeg'
+            // },
+            {
+                title: '300 Lb. Deluxe Olympic Weight Set',
+                image: './assets/powerlifting/OlympicPlateSet.2.jpg'
+            },
+            {
+                title: 'American Barbell Rubber Hex Dumbbells',
+                image: './assets/powerlifting/Dumbbells-Rubber-Hex.jpeg'
+            },
+            {
+                title: 'American Barbell 4 Slot Urethane Olympic Plates',
+                image: './assets/powerlifting/OPAB1045.jpg'
+            },
+            {
+                title: 'Hex Dumbbell with Straight Handle 30 lb (1 dumbbell)',
+                image: './assets/powerlifting/hex_dumbbell.jpg'
+            },
+            {
+                title: 'Rubber Encased Hex 80-100 Lb Dumbbell Set (pairs)',
+                image: './assets/powerlifting/SD-035R.jpg'
+            },
+            {
+                title: 'Troy Barbell VTX Vinyl Dumbbell 12 Lb - 1 dumbbell (Violet)',
+                image: './assets/powerlifting/Vinyl Dumbbell.png'
+            },
+            // {
+            //     title: '',
+            //     image: './assets/powerlifting/'
+            // },
         ]
     }
 ];
@@ -347,6 +398,9 @@ const products = [{
 
 
 function createProductCard(product) {
+    if (!product.title || !product.image) {
+        return null;
+    }
     return `
     <div class="swiper-slide item">
       <img src="${product.image}" alt="${product.title}">
@@ -375,8 +429,6 @@ function createProductCard(product) {
 }
 
 
-
-
 function createProductCardsForTab(tab) {
     const tabContent = document.querySelector(`.content[data-tab="${tab.tab}"]`);
     const swiperWrapper = tabContent.querySelector('.swiper-wrapper');
@@ -384,6 +436,100 @@ function createProductCardsForTab(tab) {
     tab.items.forEach(item => {
         const cardHtml = createProductCard(item);
         swiperWrapper.innerHTML += cardHtml;
+
+    });
+
+    const content = document.querySelector(`.content[data-tab="${tab.tab}"]`);
+    const swiperSlides = content.querySelectorAll('.item');
+    swiperSlides.forEach((slide, index) => {
+
+        if (index === 0 && !slide.querySelector('.card-img-top')) {
+            slide.remove();
+        } else {
+            slide.style.display = 'block';
+        }
+    });
+
+    const tabElement = document.querySelector(`.content[data-tab="${tab.tab}"]`);
+    tabElement.addEventListener('click', function() {
+        // hide all content elements
+        const all_content = document.querySelectorAll('.content');
+        all_content.forEach(content => {
+            content.classList.remove('active');
+        });
+
+        // hide all product cards
+        const all_swiperSlides = document.querySelectorAll('.item');
+        all_swiperSlides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+
+        // show the content element with the matching data-tab attribute value
+        const content = document.querySelector(`.content[data-tab="${tab.tab}"]`);
+        content.classList.add('active');
+
+        // show all the product cards for the active tab
+        const swiperSlides = content.querySelectorAll('.item');
+        swiperSlides.forEach(slide => {
+            slide.style.display = 'block';
+        });
+    });
+
+
+    new Swiper(tabContent.querySelector('.mySwiper'), {
+        slidesPerView: 4,
+
+        spaceBetween: 20,
+
+        freeMode: true,
+
+        // loop: true,
+
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+        breakpoints: {
+            // when window width is >= 200px (for mobile screens)
+            200: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            // when window width is >= 340px (for mobile screens)
+            300: {
+                slidesPerView: 1.05,
+                spaceBetween: 20
+            },
+            // when window width is >= 200px (for mobile screens)
+            350: {
+                slidesPerView: 1.25,
+                spaceBetween: 20
+            },
+            // when window width is >= 200px (for mobile screens)
+            450: {
+                slidesPerView: 1.5,
+                spaceBetween: 20
+            },
+            // when window width is >= 576px (for mobile screens)
+            570: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            // when window width is >= 200px (for mobile screens)
+            700: {
+                slidesPerView: 3.5,
+                spaceBetween: 20
+            },
+            // when window width is >= 992px (for large screens)
+            992: {
+                slidesPerView: 3.75,
+                spaceBetween: 30
+            },
+            1023: {
+                slidesPerView: 4.15,
+                spaceBetween: 30
+            }
+        },
     });
 }
 
@@ -394,60 +540,82 @@ products.forEach(tab => {
 
 
 
+// tabs.forEach(tab => {
+//     tab.addEventListener('click', function() {
+//         const tab_id = this.getAttribute('data-tab');
+
+//         // hide all content elements
+//         all_content.forEach(content => {
+//             content.classList.remove('active');
+//         });
+
+//         // show the content element with the matching data-tab attribute value
+//         const content = document.querySelector(`.content[data-tab="${tab_id}"]`);
+//         content.classList.add('active');
+
+//         // show all the product cards for the active tab
+//         const swiperSlides = content.querySelectorAll('.item');
+//         swiperSlides.forEach(slide => {
+//             slide.style.display = 'block';
+//         });
+//     });
+// });
 
 
-var swiper1 = new Swiper('.mySwiper', {
-    slidesPerView: 4,
 
-    spaceBetween: 30,
 
-    freeMode: true,
+// var swiper1 = new Swiper('.mySwiper', {
+//     slidesPerView: 4,
 
-    // loop: true,
+//     spaceBetween: 30,
 
-    keyboard: {
-        enabled: true,
-        onlyInViewport: false,
-    },
-    breakpoints: {
-        // when window width is >= 200px (for mobile screens)
-        200: {
-            slidesPerView: 1,
-            spaceBetween: 20
-        },
-        // when window width is >= 340px (for mobile screens)
-        300: {
-            slidesPerView: 1.05,
-            spaceBetween: 20
-        },
-        // when window width is >= 200px (for mobile screens)
-        350: {
-            slidesPerView: 1.25,
-            spaceBetween: 20
-        },
-        // when window width is >= 200px (for mobile screens)
-        450: {
-            slidesPerView: 1.5,
-            spaceBetween: 20
-        },
-        // when window width is >= 576px (for mobile screens)
-        570: {
-            slidesPerView: 2,
-            spaceBetween: 30
-        },
-        // when window width is >= 200px (for mobile screens)
-        700: {
-            slidesPerView: 3.5,
-            spaceBetween: 20
-        },
-        // when window width is >= 992px (for large screens)
-        992: {
-            slidesPerView: 3.75,
-            spaceBetween: 30
-        },
-        1023: {
-            slidesPerView: 4,
-            spaceBetween: 30
-        }
-    },
-});
+//     freeMode: true,
+
+//     // loop: true,
+
+//     keyboard: {
+//         enabled: true,
+//         onlyInViewport: false,
+//     },
+//     breakpoints: {
+//         // when window width is >= 200px (for mobile screens)
+//         200: {
+//             slidesPerView: 1,
+//             spaceBetween: 20
+//         },
+//         // when window width is >= 340px (for mobile screens)
+//         300: {
+//             slidesPerView: 1.05,
+//             spaceBetween: 20
+//         },
+//         // when window width is >= 200px (for mobile screens)
+//         350: {
+//             slidesPerView: 1.25,
+//             spaceBetween: 20
+//         },
+//         // when window width is >= 200px (for mobile screens)
+//         450: {
+//             slidesPerView: 1.5,
+//             spaceBetween: 20
+//         },
+//         // when window width is >= 576px (for mobile screens)
+//         570: {
+//             slidesPerView: 2,
+//             spaceBetween: 30
+//         },
+//         // when window width is >= 200px (for mobile screens)
+//         700: {
+//             slidesPerView: 3.5,
+//             spaceBetween: 20
+//         },
+//         // when window width is >= 992px (for large screens)
+//         992: {
+//             slidesPerView: 3.75,
+//             spaceBetween: 30
+//         },
+//         1023: {
+//             slidesPerView: 4,
+//             spaceBetween: 30
+//         }
+//     },
+// });
