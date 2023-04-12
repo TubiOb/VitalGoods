@@ -58,17 +58,17 @@ function toggle(e) {
 
 
 // SHOW SEARCH
-const searchButton = document.querySelector('.t-search'),
-    tClose = document.querySelector('.search-close'),
-    showClass = document.querySelector('.site');
+// const searchButton = document.querySelector('.t-search'),
+//     tClose = document.querySelector('.search-close'),
+//     showClass = document.querySelector('.site');
 
-searchButton.addEventListener('click', function() {
-    showClass.classList.toggle('showsearch');
-});
+// searchButton.addEventListener('click', function() {
+//     showClass.classList.toggle('showsearch');
+// });
 
-tClose.addEventListener('click', function() {
-    showClass.classList.remove('showsearch');
-});
+// tClose.addEventListener('click', function() {
+//     showClass.classList.remove('showsearch');
+// });
 
 
 // TOGGLE DEPARTMENT MENU
@@ -89,7 +89,7 @@ var swiper = new Swiper('.swiper', {
 
     autoplay: {
         delay: 3000,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
     },
 
     pagination: {
@@ -98,7 +98,7 @@ var swiper = new Swiper('.swiper', {
 
     keyboard: {
         enabled: true,
-        onlyInViewport: false,
+        // onlyInViewport: false,
     },
 });
 
@@ -483,36 +483,44 @@ function createProductCardsForTab(tab) {
 
         freeMode: true,
 
-        // loop: true,
+        loop: true,
+
+        speed: 2000,
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
 
         keyboard: {
             enabled: true,
             onlyInViewport: false,
         },
+
         breakpoints: {
             // when window width is >= 200px (for mobile screens)
             200: {
-                slidesPerView: 1,
+                slidesPerView: 1.5,
                 spaceBetween: 20
             },
             // when window width is >= 340px (for mobile screens)
             300: {
-                slidesPerView: 1.05,
+                slidesPerView: 1.75,
                 spaceBetween: 20
             },
             // when window width is >= 200px (for mobile screens)
             350: {
-                slidesPerView: 1.25,
+                slidesPerView: 2,
                 spaceBetween: 20
             },
             // when window width is >= 200px (for mobile screens)
             450: {
-                slidesPerView: 1.5,
+                slidesPerView: 2.5,
                 spaceBetween: 20
             },
             // when window width is >= 576px (for mobile screens)
             570: {
-                slidesPerView: 2,
+                slidesPerView: 2.75,
                 spaceBetween: 30
             },
             // when window width is >= 200px (for mobile screens)
@@ -537,85 +545,3 @@ function createProductCardsForTab(tab) {
 products.forEach(tab => {
     createProductCardsForTab(tab);
 });
-
-
-
-// tabs.forEach(tab => {
-//     tab.addEventListener('click', function() {
-//         const tab_id = this.getAttribute('data-tab');
-
-//         // hide all content elements
-//         all_content.forEach(content => {
-//             content.classList.remove('active');
-//         });
-
-//         // show the content element with the matching data-tab attribute value
-//         const content = document.querySelector(`.content[data-tab="${tab_id}"]`);
-//         content.classList.add('active');
-
-//         // show all the product cards for the active tab
-//         const swiperSlides = content.querySelectorAll('.item');
-//         swiperSlides.forEach(slide => {
-//             slide.style.display = 'block';
-//         });
-//     });
-// });
-
-
-
-
-// var swiper1 = new Swiper('.mySwiper', {
-//     slidesPerView: 4,
-
-//     spaceBetween: 30,
-
-//     freeMode: true,
-
-//     // loop: true,
-
-//     keyboard: {
-//         enabled: true,
-//         onlyInViewport: false,
-//     },
-//     breakpoints: {
-//         // when window width is >= 200px (for mobile screens)
-//         200: {
-//             slidesPerView: 1,
-//             spaceBetween: 20
-//         },
-//         // when window width is >= 340px (for mobile screens)
-//         300: {
-//             slidesPerView: 1.05,
-//             spaceBetween: 20
-//         },
-//         // when window width is >= 200px (for mobile screens)
-//         350: {
-//             slidesPerView: 1.25,
-//             spaceBetween: 20
-//         },
-//         // when window width is >= 200px (for mobile screens)
-//         450: {
-//             slidesPerView: 1.5,
-//             spaceBetween: 20
-//         },
-//         // when window width is >= 576px (for mobile screens)
-//         570: {
-//             slidesPerView: 2,
-//             spaceBetween: 30
-//         },
-//         // when window width is >= 200px (for mobile screens)
-//         700: {
-//             slidesPerView: 3.5,
-//             spaceBetween: 20
-//         },
-//         // when window width is >= 992px (for large screens)
-//         992: {
-//             slidesPerView: 3.75,
-//             spaceBetween: 30
-//         },
-//         1023: {
-//             slidesPerView: 4,
-//             spaceBetween: 30
-//         }
-//     },
-// });
