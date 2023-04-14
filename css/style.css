@@ -100,6 +100,7 @@ input::placeholder {
     max-width: 100%;
     margin: 0 auto;
     padding: 0 .938em;
+    border: 1px solid darkred;
 }
 
 .column {
@@ -764,12 +765,6 @@ h3) span:last-child {
     display: none;
 }
 
-.popular .item {
-    width: 200px;
-    height: 280px;
-    display: block;
-}
-
 .content_box .content {
     display: none;
     animation: moving .5s ease;
@@ -787,7 +782,7 @@ h3) span:last-child {
     height: auto;
     padding: 10px;
     overflow-x: hidden;
-    /* border: 1px solid brown; */
+    border: 1px solid brown;
 }
 
 @keyframes moving {
@@ -827,22 +822,6 @@ h3) span:last-child {
     margin: 10px 0;
     margin: .2rem auto;
     /* margin-left: 5px; */
-}
-
-.popular .item p {
-    font-weight: 300;
-}
-
-.popular .item .underline {
-    font-size: 11px;
-    font-weight: 400;
-    text-decoration: underline;
-    text-align: center;
-    margin-bottom: 4px;
-}
-
-.popular .item p span {
-    font-weight: 400;
 }
 
 .content .item .hoverable {
@@ -918,11 +897,83 @@ h3) span:last-child {
     margin-left: 35px;
 }
 
+
+/* CATEGORIES */
+
+.popular .item {
+    width: 200px;
+    height: 280px;
+    display: block;
+}
+
+.popular .item p {
+    font-weight: 300;
+}
+
+.popular .item .underline {
+    font-size: 11px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.popular .item p span {
+    font-weight: 400;
+}
+
 .popular h4 {
     /* border-bottom: 1px solid var(--light-text-color); */
     text-transform: uppercase;
     margin-left: 15px;
     margin-top: 10px;
+}
+
+
+/* SHIPPING */
+
+.shipping-details {
+    /* display: grid;
+    grid-template-columns: repeat(30%, auto-fit);
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); */
+    margin: 0 auto;
+    margin-top: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em 0;
+    width: 100%;
+    border: 2px solid navy;
+}
+
+.box {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em 20px;
+    width: 400px;
+    height: 250px;
+    border: 1px solid var(--light-text-color);
+    background-color: var(--bg-color);
+}
+
+.box i {
+    font-size: var(--large-font);
+}
+
+.box h3 {
+    text-transform: uppercase;
+}
+
+.box p {
+    font-size: var(--p-font);
+    font-weight: 500;
+    font-family: 'Lato';
+}
+
+.box span {
+    font-size: var(--p-font);
+    margin-top: 15px;
 }
 
 
@@ -1271,4 +1322,15 @@ h3) span:last-child {
     .tab-box .tab_btn {
         font-size: var(--font-small);
     }
+}
+
+
+/* SHIPPING DETAILS */
+
+.box .truck {
+    border: red;
+}
+
+.box .contact {
+    border-left: red;
 }
