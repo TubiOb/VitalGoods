@@ -621,6 +621,8 @@ form.search button:hover {
     padding: 10px;
     overflow-x: hidden;
     border: 1px solid brown;
+    margin-left: 200px;
+    margin-right: -10px;
 }
 
 .slider {
@@ -765,7 +767,7 @@ h3) span:last-child {
     padding: 5px;
     margin: 10px 0;
     width: 100px;
-    height: 270px;
+    height: 290px;
     color: white;
     /* border-radius: 10px; */
     transition: all 0.4s ease-in-out;
