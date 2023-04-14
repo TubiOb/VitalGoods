@@ -545,3 +545,78 @@ function createProductCardsForTab(tab) {
 products.forEach(tab => {
     createProductCardsForTab(tab);
 });
+
+
+//
+
+new Swiper('.mySlider', {
+    slidesPerView: 4,
+
+    spaceBetween: 20,
+
+    freeMode: true,
+
+    loop: false,
+
+    // simulateTouch: true,
+
+    // touchRatio: 0,
+
+    // touchAngle: 0.5,
+
+    // grabCursor: true,
+
+    // speed: 2000,
+
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+
+    breakpoints: {
+        // when window width is >= 200px (for mobile screens)
+        200: {
+            slidesPerView: 1.5,
+            spaceBetween: 20
+        },
+        // when window width is >= 340px (for mobile screens)
+        300: {
+            slidesPerView: 1.75,
+            spaceBetween: 20
+        },
+        // when window width is >= 200px (for mobile screens)
+        350: {
+            slidesPerView: 1.85,
+            spaceBetween: 20
+        },
+        // when window width is >= 200px (for mobile screens)
+        450: {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+        },
+        // when window width is >= 576px (for mobile screens)
+        570: {
+            slidesPerView: 2.75,
+            spaceBetween: 30
+        },
+        // when window width is >= 200px (for mobile screens)
+        700: {
+            slidesPerView: 3.5,
+            spaceBetween: 20
+        },
+        // when window width is >= 992px (for large screens)
+        992: {
+            slidesPerView: 3.75,
+            spaceBetween: 30
+        },
+        1023: {
+            slidesPerView: 4.15,
+            spaceBetween: 30
+        }
+    },
+});

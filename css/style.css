@@ -231,7 +231,7 @@ input::placeholder {
 
 /* TOP NAV/HEADER */
 
-:where(.off-canvas,
+ :where(.off-canvas,
 header) li>a {
     display: flex;
     position: relative;
@@ -269,12 +269,12 @@ header) li>a {
     display: none;
 }
 
-:where(.navigation-top,
+ :where(.navigation-top,
 .thetop-nav) ul ul li a {
     padding: .25em 2em;
 }
 
-:where(.navigation-top,
+ :where(.navigation-top,
 .thetop-nav) ul ul li.current a {
     background-color: var(--border-color);
 }
@@ -618,15 +618,15 @@ form.search button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     /* width: 100%; */
     margin: 0 auto important;
-    /* margin-inline: 2rem; */
+    /* border: 2px solid purple; */
 }
 
 .slider .item {
     position: relative;
     height: 474px;
+    /* border: 2px solid springgreen; */
 }
 
 .slider .item::before {
@@ -680,12 +680,16 @@ h3) span:last-child {
 
 /* FEATURED PRODUCTS */
 
-.features {
+.features,
+.popular {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     position: relative;
+    /* margin: auto;
+    width: 90%; */
+    /* border: 1px solid red; */
 }
 
 .features-nav {
@@ -739,7 +743,8 @@ h3) span:last-child {
     transition: all .3s ease-in-out;
 } */
 
-.content .item {
+.content .item,
+.popular .item {
     cursor: pointer;
     flex-direction: column;
     background-color: var(--bg-color);
@@ -748,7 +753,7 @@ h3) span:last-child {
     width: 100px;
     height: 270px;
     color: white;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transition: all 0.4s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     align-items: center;
@@ -757,6 +762,12 @@ h3) span:last-child {
     position: relative;
     /* border: 1px solid red; */
     display: none;
+}
+
+.popular .item {
+    width: 200px;
+    height: 280px;
+    display: block;
 }
 
 .content_box .content {
@@ -770,7 +781,8 @@ h3) span:last-child {
     display: block;
 }
 
-.mySwiper {
+.mySwiper,
+.mySlider {
     max-width: 100%;
     height: auto;
     padding: 10px;
@@ -789,20 +801,24 @@ h3) span:last-child {
     }
 }
 
-.content .item:hover {
+.content .item:hover,
+.popular .item:hover {
     box-shadow: 0 0 18px 0 rgba(35, 35, 35, .3);
     scale: 1.01;
 }
 
-.content .item img {
+.content .item img,
+.popular .item img {
     width: 100%;
-    /* margin: auto; */
+    margin: auto;
     height: 200px;
     border-radius: 8px;
     object-fit: cover;
 }
 
-.content .item span {
+.content .item span,
+.popular .item span,
+.popular .item p {
     font-size: 12px;
     color: var(--title-color);
     text-align: center;
@@ -811,6 +827,22 @@ h3) span:last-child {
     margin: 10px 0;
     margin: .2rem auto;
     /* margin-left: 5px; */
+}
+
+.popular .item p {
+    font-weight: 300;
+}
+
+.popular .item .underline {
+    font-size: 11px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.popular .item p span {
+    font-weight: 400;
 }
 
 .content .item .hoverable {
@@ -884,6 +916,13 @@ h3) span:last-child {
 .brands h4 {
     text-transform: uppercase;
     margin-left: 35px;
+}
+
+.popular h4 {
+    /* border-bottom: 1px solid var(--light-text-color); */
+    text-transform: uppercase;
+    margin-left: 15px;
+    margin-top: 10px;
 }
 
 
@@ -1045,6 +1084,18 @@ h3) span:last-child {
 
 .showdpt .dpt-trigger .ri-close-line {
     display: block;
+}
+
+@media (min-width: 481px) {
+    .features-nav {
+        width: 97%;
+    }
+}
+
+@media (min-width: 768px) {
+    .features-nav {
+        width: 97%;
+    }
 }
 
 @media (min-width: 992px) {
