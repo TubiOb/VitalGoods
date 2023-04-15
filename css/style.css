@@ -1179,6 +1179,13 @@ h3) span:last-child {
     .features-nav {
         width: 97%;
     }
+    /* SHIPPING DETAILS */
+    .shipping-details .box:first-child {
+        border: 1px solid var(--light-text-color);
+    }
+    .shipping-details .box:last-child {
+        border: 1px solid var(--light-text-color);
+    }
 }
 
 @media (min-width: 992px) {
@@ -1356,10 +1363,10 @@ h3) span:last-child {
         font-size: var(--font-small);
     }
     /* SHIPPING DETAILS */
-    .box .truck {
-        border: red;
+    .shipping-details .box:first-child {
+        border-right: none;
     }
-    .box .contact {
-        border-left: red;
+    .shipping-details .box:last-child {
+        border-left: none;
     }
 }
