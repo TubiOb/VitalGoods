@@ -956,7 +956,7 @@ h3) span:last-child {
     flex-wrap: wrap;
     padding: 2em 0;
     width: 100%;
-    border: 2px solid navy;
+    /* border: 2px solid navy; */
 }
 
 .box {
