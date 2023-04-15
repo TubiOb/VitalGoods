@@ -58,17 +58,17 @@ function toggle(e) {
 
 
 // SHOW SEARCH
-// const searchButton = document.querySelector('.t-search'),
-//     tClose = document.querySelector('.search-close'),
-//     showClass = document.querySelector('.site');
+const searchButton = document.querySelector('.t-search'),
+    tClose = document.querySelector('.search-close'),
+    showClass = document.querySelector('.site');
 
-// searchButton.addEventListener('click', function() {
-//     showClass.classList.toggle('showsearch');
-// });
+searchButton.addEventListener('click', function() {
+    showClass.classList.toggle('showsearch');
+});
 
-// tClose.addEventListener('click', function() {
-//     showClass.classList.remove('showsearch');
-// });
+tClose.addEventListener('click', function() {
+    showClass.classList.remove('showsearch');
+});
 
 
 // TOGGLE DEPARTMENT MENU
@@ -94,6 +94,7 @@ var swiper = new Swiper('.swiper', {
 
     pagination: {
         el: '.swiper-pagination',
+        clickable: 'true',
     },
 
     keyboard: {
@@ -557,6 +558,12 @@ new Swiper('.mySlider', {
     freeMode: true,
 
     loop: false,
+
+    touchEventsTarget: 'container',
+
+    touchRatio: 2,
+
+    touchAngle: 45,
 
     // simulateTouch: true,
 
