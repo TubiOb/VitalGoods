@@ -289,6 +289,7 @@ header) li>a {
 .navigation {
     padding: 0.5em 0;
     margin-bottom: 1.5em;
+    height: 130px;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -1202,21 +1203,20 @@ h3) span:last-child {
     flex-wrap: wrap;
     background-color: var(--light-text-color);
     color: var(--bg-color);
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .footer-contents a {
     color: var(--bg-color);
 }
 
-
-/* .footer-contents a {
+.footer-contents a {
     color: var(--bg-color);
     font-size: 12px;
     text-decoration: none;
 }
 
-.footer-contents a :hover {
+.footer-contents a:hover {
     color: var(--light-text-color);
     color: var(--text-color-light);
 }
@@ -1228,12 +1228,88 @@ h3) span:last-child {
 
 .footer-contents a:last-child .line {
     display: none;
-} */
+}
 
 .funneled {
     text-align: center;
     display: none;
     margin-bottom: 24px;
+}
+
+
+/* NEWSLETTER */
+
+.newsletter {
+    gap: 5px;
+    padding: .938em;
+    font-size: 12px;
+}
+
+.row,
+.col h5 {
+    margin-left: 5px;
+}
+
+.social i {
+    font-size: 18px;
+    border: 1px solid gray;
+    background-color: var(--primary-clr);
+    padding: .218em;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+}
+
+.newsletter-signup h5,
+.col h5 {
+    font-size: var(--p-font);
+    margin-bottom: 5px;
+}
+
+form.newslettersignup {
+    margin: .938em;
+}
+
+form.newslettersignup input {
+    line-height: 2.55em;
+    padding: 0 7em 0 4.5em;
+    border: 0;
+    outline: 0;
+    width: 90%;
+    border-radius: 7px;
+    font-size: .9em;
+    font-weight: 300;
+}
+
+form.newslettersignup :where(.icon-large,
+button) {
+    position: absolute;
+    top: 0;
+    padding: .25em 1.5em;
+    font-size: 1em;
+    color: var(--light-text-color);
+    height: 100%;
+}
+
+form.newslettersignup button {
+    width: 90px;
+    right: 0;
+    border: 0;
+    outline: 0;
+    font-size: var(--font-small);
+    font-weight: 600;
+    background-color: var(--primary-clr);
+    color: var(--bg-color);
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
+    /* transition: var(--trans-backgound); */
+}
+
+.newsletter-signup p,
+form.newslettersignup p,
+.policies {
+    font-size: var(--font-small);
+    /* border: 1px solid red; */
 }
 
 @media(min-width: 1024px) {
@@ -1269,6 +1345,9 @@ h3) span:last-child {
 .copyright {
     margin-top: 2em;
     text-align: center;
+    /* align-self: center;
+    justify-self: center; */
+    margin: auto;
 }
 
 
@@ -1498,13 +1577,13 @@ h3) span:last-child {
     }
     .footer-static {
         width: 65%;
-        border: 1px solid green;
+        /* border: 1px solid green; */
         align-items: center;
         padding: .938em;
     }
     .desktop-actions {
         width: 30%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         top: 0px;
         padding: .938em;
     }
