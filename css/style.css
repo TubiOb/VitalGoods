@@ -1203,7 +1203,7 @@ h3) span:last-child {
     flex-wrap: wrap;
     background-color: var(--light-text-color);
     color: var(--bg-color);
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 .footer-contents a {
