@@ -1243,11 +1243,19 @@ h3) span:last-child {
     gap: 5px;
     padding: .938em;
     font-size: 12px;
+    text-align: center;
 }
 
 .row,
 .col h5 {
     margin-left: 5px;
+}
+
+.social {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border: 1px solid red; */
 }
 
 .social i {
@@ -1258,12 +1266,14 @@ h3) span:last-child {
     border-radius: 50%;
     outline: none;
     border: none;
+    text-align: center;
 }
 
 .newsletter-signup h5,
 .col h5 {
     font-size: var(--p-font);
     margin-bottom: 5px;
+    text-align: center;
 }
 
 form.newslettersignup {
@@ -1271,14 +1281,14 @@ form.newslettersignup {
 }
 
 form.newslettersignup input {
-    line-height: 2.55em;
+    line-height: 3.55em;
     padding: 0 7em 0 4.5em;
     border: 0;
     outline: 0;
     width: 90%;
     border-radius: 7px;
-    font-size: .9em;
-    font-weight: 300;
+    font-size: 1em;
+    font-weight: 400;
 }
 
 form.newslettersignup :where(.icon-large,
@@ -1286,7 +1296,7 @@ button) {
     position: absolute;
     top: 0;
     padding: .25em 1.5em;
-    font-size: 1em;
+    font-size: 1.5em;
     color: var(--light-text-color);
     height: 100%;
 }
@@ -1348,6 +1358,7 @@ form.newslettersignup p,
     /* align-self: center;
     justify-self: center; */
     margin: auto;
+    margin-bottom: 50px;
 }
 
 
