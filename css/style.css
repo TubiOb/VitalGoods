@@ -1270,7 +1270,8 @@ h3) span:last-child {
 }
 
 .newsletter-signup h5,
-.col h5 {
+.col h5,
+#contact h5 {
     font-size: var(--p-font);
     margin-bottom: 5px;
     text-align: center;
@@ -1343,12 +1344,14 @@ form.newslettersignup p,
     gap: 5px;
 }
 
-#app.funneled .footer-static .desktop-static,
-#app.funneled .footer-static .mobile {
+.funneled .footer-static .desktop-static,
+.funneled .footer-static .mobile,
+#contact {
     display: none;
 }
 
-#app.funneled .footer-static .funneled {
+.funneled .footer-static .funneled,
+#contact.active {
     display: block;
 }
 
@@ -1359,6 +1362,20 @@ form.newslettersignup p,
     justify-self: center; */
     margin: auto;
     margin-bottom: 40px;
+}
+
+
+/* #contact {
+    display: none;
+} */
+
+#contact.active {
+    /* display: block; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--font-small);
+    margin: 15px auto;
 }
 
 
@@ -1597,6 +1614,9 @@ form.newslettersignup p,
         /* border: 1px solid red; */
         top: 0px;
         padding: .938em;
+    }
+    #contact {
+        display: none;
     }
     /* .funneled {
         text-align: left

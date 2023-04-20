@@ -627,3 +627,16 @@ new Swiper('.mySlider', {
         }
     },
 });
+
+
+// SHOW CONTACTINFO ON MOBILE
+const contactButton = document.querySelector('.conct'),
+    contactInfo = document.querySelector('#contact');
+
+contactButton.addEventListener('click', function() {
+    contactInfo.classList.toggle('active');
+});
+
+contactButton.addEventListener('dbclick', function() {
+    contactInfo.classList.remove('active');
+});
