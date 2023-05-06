@@ -279,7 +279,7 @@
     
     .navigation {
         padding: 0.5em 0;
-        margin-bottom: 1.5em;
+        margin-bottom: .5em;
         height: 130px;
         border-bottom: 1px solid var(--border-color);
     }
@@ -939,8 +939,9 @@
         padding: 2em 20px;
         width: 400px;
         height: 250px;
-        border: 1px solid var(--light-text-color);
+        /* border: 1px solid var(--light-text-color); */
         background-color: var(--bg-color);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
     
     .box i {
@@ -1334,9 +1335,6 @@
     }
     /*  */
     /* ABOUT US PAGE */
-    /* .aboutHead {
-        margin-bottom: 50px;
-    } */
     
     .aboutHead .item {
         position: relative;
@@ -1446,18 +1444,17 @@
         .features-nav {
             width: 97%;
         }
+        .image-overlay {
+            width: 50%;
+        }
     }
     
     @media (min-width: 768px) {
         .features-nav {
             width: 97%;
         }
-        /* SHIPPING DETAILS */
-        .shipping-details .box:first-child {
-            border: 1px solid var(--light-text-color);
-        }
-        .shipping-details .box:last-child {
-            border: 1px solid var(--light-text-color);
+        .image-overlay {
+            width: 40%;
         }
     }
     
@@ -1634,13 +1631,6 @@
         }
         .tab-box .tab_btn {
             font-size: var(--font-smaller);
-        }
-        /* SHIPPING DETAILS */
-        .shipping-details .box:first-child {
-            border-right: none;
-        }
-        .shipping-details .box:last-child {
-            border-left: none;
         }
         /* FOOTER */
         .footer-contents {
