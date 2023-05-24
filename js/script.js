@@ -85,6 +85,10 @@ dptButton.addEventListener('click', function() {
 var swiper = new Swiper('.swiper', {
     speed: 2000,
 
+    grabCursor: true,
+
+    simulateTouch: true,
+
     loop: true,
 
     autoplay: {
@@ -480,9 +484,13 @@ function createProductCardsForTab(tab) {
     new Swiper(tabContent.querySelector('.mySwiper'), {
         slidesPerView: 4,
 
+        grabCursor: true,
+
         spaceBetween: 20,
 
         freeMode: true,
+
+        simulateTouch: true,
 
         loop: true,
 
@@ -553,6 +561,8 @@ products.forEach(tab => {
 new Swiper('.mySlider', {
     slidesPerView: 4,
 
+    grabCursor: true,
+
     spaceBetween: 20,
 
     freeMode: true,
@@ -565,7 +575,7 @@ new Swiper('.mySlider', {
 
     touchAngle: 45,
 
-    // simulateTouch: true,
+    simulateTouch: true,
 
     // touchRatio: 0,
 
